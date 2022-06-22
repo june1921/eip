@@ -1,4 +1,32 @@
-# 1. 마크다운에 관하여
-## 1.1. 마크다운이란?
-[**Markdown**](http://whatismarkdown.com/)은 텍스트 기반의 마크업언어로 2004년 존그루버에 의해 만들어졌으며 쉽게 쓰고 읽을 수 있으며 HTML로 변환이 가능하다. 특수기호와 문자를 이용한 매우 간단한 구조의 문법을 사용하여 웹에서도 보다 빠르게 컨텐츠를 작성하고 보다 직관적으로 인식할 수 있다.
-마크다운이 최근 각광받기 시작한 이유는 깃헙([https://github.com](https://github.com)) 덕분이다. 깃헙의 저장소Repository에 관한 정보를 기록하는 README.md는 깃헙을 사용하는 사람이라면 누구나 가장 먼저 접하게 되는 마크다운 문서였다. 마크다운을 통해서 설치방법, 소스코드 설명, 이슈 등을 간단하게 기록하고 가독성을 높일 수 있다는 강점이 부각되면서 점점 여러 곳으로 퍼져가게 된다.
+# 8장 SQL 응용
+## 118. SQL - DDL
+### 1. DDL(Data Define Language, 데이터 정의어)
+CREATE, ALTER, DROP. DB를 쓰면서 얼마나 쓸일이 있냐만은 일단은 정리 차원에서 적어둔다.
+* CREATE: SCHEMA, DOMAIN, TABLE, VIEW, INDEX를 정의함   
+* ALTER: TABLE에 대한 정의를 변경하는 데 사용함  
+* DROP: SCHEMA, DOMAIN, TABLE, VIEW, INDEX를 삭제함
+### 2. CREATE SCHEMA
+```
+CREATE SCHEMA 스키마명 AUTHORIZATION 사용자_id;  
+```
+소유권자의 사용자 ID가 '홍길동'인 스키마 '대학교'를 정의하는 SQL문  
+```
+CREATE SCHEMA 대학교 AUTHORIZATION 홍길동;
+```
+### 3. CREATE DOMAIN
+```
+CREATE DOMAIN 도메인명[AS] 데이터_타입
+    [DEFAULT 기본값]
+    [CONSTRAINT 제약조건명 CHECK (범위값)];
+```
+여기서 대괄호 []로 표시된 것은 생략 가능하다는 뜻이다.
+* 데이터 타입: SQL에서 지원하는 데이터 타입
+* 기본값: 데이터를 입력하지 않았을 때 자동으로 입력되는 값   
+
+'성별'을 '남' 또는 '여'와 같이 정해진 1개의 문자로 표현되는 도메인 SEX를 정의하는 SQL문은 다음과 같다.
+```
+CREATE DOMAIN SEX CHAR(1)
+    DEFAULT '남'
+    CONSTRAINT VALID-SEX CHECK(VALUE IN('남', 여));
+```
+### 4. CREATE TABLE
