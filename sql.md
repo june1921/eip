@@ -30,3 +30,20 @@ CREATE DOMAIN SEX CHAR(1)
     CONSTRAINT VALID-SEX CHECK(VALUE IN('남', 여));
 ```
 ### 4. CREATE TABLE
+```
+CREATE TABLE 테이블명
+    (속성명 데이터_타입 [DEFAULT 기본값] [NOT NULL], ...
+    [, PRIMARY KEY(기본키_속성명, ...)]
+    [, UNIQUE(대체키_속성명, ...)]
+    [, FOREIGN KEY(외래키_속성명, ...)
+        REFERENCES 참조테이블(기본키_속성명, ...)]
+        [ON DELETE 옵션]
+        [ON UPDATE 옵션]
+    [, CONSTRAINT 제약조건명][CHECK (조건식)]);
+```
+* 기본 테이블에 포함될 모든 속성에 대하여 속성명과 그 속성의 데이터 타입, 기본값, NOT NULL 여부를 지정한다.
+* PRIMARY KEY: 기본키로 사용할 속성을 지정함
+* UNIQUE: 대체키로 사용할 속성을 지정함, 중복된 값을 가질 수 없음
+* FOREIGN KEY ~ REFERENCES ~: 외래키로 사용할 속성을 지정함
+  - ON DELETE 옵션: 참조 테이블의 튜플이 삭제되었을 때 기본 테이블에 취해야 할 사항을 지정함
+  - ON UPDATE 옵션: 참조 테이블의 참조 속성 값이 변경되었을 때 기본 테이블에 취해야 할 사항을 지정함
