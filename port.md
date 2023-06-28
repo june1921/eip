@@ -14,37 +14,37 @@
 
 2. 포트(port) 번호는 IANA에서 3개 구역으로 분리해서 관리
 
-가. Wellknown port​ : 0 ~ 1023 (잘 알려진 포트)
+- Wellknown port​ : 0 ~ 1023 (잘 알려진 포트)
 
-나. Registered Port : 특정 응용을 위해 기업이 사용, 1024 ~ 49151 (등록된 포트)
+- Registered Port : 특정 응용을 위해 기업이 사용, 1024 ~ 49151 (등록된 포트)
 
-다. Dynamic Port : 49152 ~ 65535의 범위를 가지며 등록되거나 통제되지 않으며 임시 포트(대체로 운영체제가 할당) (동적 포트)
+- Dynamic Port : 49152 ~ 65535의 범위를 가지며 등록되거나 통제되지 않으며 임시 포트(대체로 운영체제가 할당) (동적 포트)
 
 ​
 
 3. 기본적인 Well-Known port
 
-FTP (20, 21 / tcp)
+- FTP (20, 21 / tcp)
 
-SSH (22 / tcp)
+- SSH (22 / tcp)
 
-TELNET (23 / tcp)
+- TELNET (23 / tcp)
 
-SMTP (25 / tcp)
+- SMTP (25 / tcp)
 
-DNS (53 / tcp, udp)
+- DNS (53 / tcp, udp)
 
-DHCP (67, 68 / udp)
+- DHCP (67, 68 / udp)
 
-HTTP (80 / tcp, udp)
+- HTTP (80 / tcp, udp)
 
-POP3 (110 / tcp)
+- POP3 (110 / tcp)
 
-RPC (111 / tcp, udp)
+- RPC (111 / tcp, udp)
 
-IMAP (143 / tcp)
+- IMAP (143 / tcp)
 
-SNMP (161, 162 / udp )
+- SNMP (161, 162 / udp )
 
-TLS/SSL 방식의 HTTP (443 / tcp)
+- TLS/SSL 방식의 HTTP (443 / tcp)
 [출처] 반드시 알아야 할 PORT (수제비- IT 커뮤니티 (정보처리기사,빅데이터분석기사, AdSP 등)) | 작성자 수제비쌤
