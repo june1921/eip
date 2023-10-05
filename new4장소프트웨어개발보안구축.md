@@ -1,3 +1,19 @@
+트랜잭션 특성 ACID
+병행제어 기법: 로킹, 낙관점 검증, 타임스탬프 순서, 다중버전 동시성 제어
+회복기법(영속성 주요 기법): REDO, UNDO
+DDL의 대상: 스키마(외부, 개념, 내부), 테이블, 뷰, 인덱스
+테이블 관련 용어
+행=튜플=카디널리티(=행의 수)=레코드
+열=차수(=디그리, 열의 수)=애트리뷰트=속성
+
+파일조직: 순차, 해싱(=직접), 인덱스
+형상 관리 기법: 식 통 감 기
+형상 관리 도구: CVS, SVN, RCS, Bitkeeper, Git, Clear Case
+
+SW 모듈 응집도: 우 논 시 절 통 순 기
+SW 모듈 결합도: 내 공 외 제 스 자
+
+공통모듈의 종류: xUnit -> jUnit, CppUnit, HttpUnit
 개발보안의 3요소 기-무-가
 DoS: syn, udp flooding, 스머프, 죽음의핑, 랜드 어택, 티어드롭, 봉크, 보잉크
 세션 하이재킹: 
@@ -38,3 +54,16 @@ SW 테스트 원리: 결함 존재 증명, 완벽 테스팅 불가능, 초기 �
 디스크 스케줄링 종류: FCFS, SSTF, SCAN, C-SCAN, LOOK, N-STEP SCAN, SLTF
 
 OSI 7Layers: 물리, 데이터링크, 네트워크, 전송, 세션, 표현, 응용...
+
+데이터링크 계층: 회선 제어, 흐름 제어, 오류 제어
+DL 계층 프로토콜: HDLC, PPP, 프레임 릴레이, ATM
+DL 계층의 오류제어: 전진(=순방향) 오류 수정(FEC), 후진(=역방향) 오류 수정(BEC)
+FEC: 해밍 코드, 상승 코드
+BEC: 패리티 검사, CRC, 블록합 검사로 검출하고 ARQ로 오류 제어
+ARQ: Stop and Wait, Go back N, Selective Repeat
+
+네트워크 계층의 프로토콜: IP, ARP, RARP, ICMP, IGMP, 라우팅 프로토콜
+서브네팅
+라우팅 프로토콜: IGP, EGP
+IGP: RIP, IGRP, OSPF, EIGRP
+EGP: BGP 
